@@ -1,5 +1,5 @@
 function start() {
-    location.href = "/public/views/index.html"
+    location.href = "/public/index.html"
 }
 
 var selectCategory = document.getElementById('selectCategory')
