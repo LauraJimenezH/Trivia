@@ -1,3 +1,7 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
 #container-options {
     margin-top: 30px;
 }
@@ -7,13 +11,35 @@
     margin: 10px auto;
 }
 
+.btn-start {
+    background: #5f9ddc;
+    color: white;
+    padding: 6px 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .navbar {
     background: #f4f4f4;
-    box-shadow: 0px 1px 2px 0.5px #ccc
+    box-shadow: 0px 1px 2px 0.5px #ccc;
+    padding: 0px !important;
+}
+
+.back {
+    color: #5f9ddc;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
 }
 
 .navbar span {
-    color: #3a8cde;
+    color: #5f9ddc;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.welcome {
+    font-size: 30px;
 }
 
 li {
@@ -40,8 +66,8 @@ li p {
 }
 
 p>span {
-    color: #3a8cde;
-    
+    color: #5f9ddc;
+
 }
 
 .btn-next {
@@ -49,4 +75,16 @@ p>span {
     padding: 10px 40px;
     display: none;
     margin: 0 auto;
+}
+
+.form-group {
+    padding: 10px 35px !important;
+}
+
+.form-group label {
+    font-size: 18px;
+}
+
+.form-group select{
+    border: 2px solid #5f9ddc;
 }

@@ -10,7 +10,8 @@ window.addEventListener('load', getApi())
 function getApi() {
     arrConfirm = [];
     const articleRequest = new XMLHttpRequest();
-
+    var category = localStorage.getItem('category');
+    var difficulty = localStorage.getItem('difficulty');
     articleRequest.onreadystatechange = function () {
         if (articleRequest.readyState === 4 && articleRequest.status === 200) {
             const data = JSON.parse(this.responseText);
@@ -41,7 +42,6 @@ function getApi() {
             answerCorrect = correctAnswer;
             
             var optionsAnswer = shuffleArr(incorrectAnswers, correctAnswer);
-            console.log(optionsAnswer)
             var list = document.createElement('ul');
             var containerAnswer = document.createElement('div')
             containerAnswer.setAttribute('id', 'container-options')
@@ -67,7 +67,7 @@ function getApi() {
             articleRequest.onerror = handleError;
         }
     };
-    articleRequest.open('GET', `https://opentdb.com/api.php?amount=1`);
+    articleRequest.open('GET', `https://opentdb.com/api.php?amount=1&category=${category}&difficulty=${difficulty}`);
     articleRequest.send();
 
 }
@@ -77,10 +77,8 @@ function handleError() {
 }
 
 function shuffleArr(arr, correct) {
-    console.log(arr, correct)
     var options = arr;
     options.push(correct)
-    // console.log('normal',options)
 
     for (var i = options.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -91,22 +89,12 @@ function shuffleArr(arr, correct) {
     return options
 }
 
-if (arrConfirm.length > 0) {
-
-}
-
-
 function choice(event) {
     var result = document.getElementById('result');
     var resultCorrect = document.getElementById('result-correct')
-    console.log(event.target.textContent)
-    console.log(answerCorrect);
     var element = event.target.parentNode
-    console.log(element)
-    console.log(element)
-    console.log(arrConfirm.length)
     btnNext.style.display = 'block';
-    btnNext.style.backgroundColor = '#3a8cde';
+    btnNext.style.backgroundColor = '#5f9ddc';
     btnNext.style.color = 'white';
     if (arrConfirm.length > 0) {
 
@@ -131,23 +119,14 @@ function choice(event) {
 }
 
 function nextQuestion() {
-    console.log(container.childElementCount)
-    // container.remove();
-
-    // var containerAll = document.createElement('div');
-    // containerAll.setAttribute('id', 'all-container')
-    console.log(container.childElementCount)
     let i = 0;
     while (container.childElementCount != 0) {
         container.childNodes[0].remove();
-        
     }
-
     btnNext.style.display = 'none';
-
-    // debugger
-
-
-
     getApi();
+}
+
+function back() {
+    location.href = "/home.html"
 }

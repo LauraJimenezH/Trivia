@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Righteous|Satisfy|Shadows+Into+Light|ZCOOL+KuaiLe"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body class="text-center">
+    <nav class="navbar">
+        <span class="navbar-brand mb-0 h1 mx-auto">Trivia</span>
+    </nav>
+    <br>
+    <p class="welcome">Welcome</p>
+    <form class="text-left">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Category</label>
+            <select class="form-control" id="selectCategory" onchange="choiceCategory(event)">
+                <option  selected>Seleccione</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Difficulty</label>
+            <select class="form-control" id="selectDifficulty" onchange="choiceDifficulty(event)">
+                <option selected>Seleccione</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <button class="btn btn-start" id="start" onclick="start()" disabled>START</button>
+
+    <script src="home.js"></script>
+</body>
+
+</html>
