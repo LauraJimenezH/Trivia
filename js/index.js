@@ -1,5 +1,5 @@
 function start() {
-    location.href = "../views/home.html"
+    location.href = "view/home.html"
 }
 
 var boxName = document.getElementById('nombreUser');
