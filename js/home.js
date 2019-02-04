@@ -75,6 +75,7 @@ function getApi() {
                 list.appendChild(elementList);
                 elementList.appendChild(option);
                 option.innerHTML = element;
+                option.setAttribute('data-value', element)
                 elementList.setAttribute('onCLick', 'choice(event)')
             });
         } else {
@@ -114,7 +115,7 @@ function choice(event) {
     if (arrConfirm.length > 0) {
 
     } else {
-        if (event.target.textContent === answerCorrect) {
+        if (event.target.dataset.value === answerCorrect) {
             element.style.backgroundColor = '#65c063';
             element.style.color = 'white';
             result.style.color = '#65c063'
