@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Righteous|Satisfy|Shadows+Into+Light|ZCOOL+KuaiLe" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
@@ -17,7 +17,7 @@
 <body class="text-center ">
     <nav class="navbar">
         <div class="back" onclick="back()">
-            <i class="fas fa-chevron-left"></i>        
+            <i class="fas fa-sign-out-alt"></i>        
         </div>
         <span class="navbar-brand mb-0 h1 mx-auto">Trivia</span>
     </nav>
@@ -27,7 +27,21 @@
     <br>
     <button id="next" class="btn btn-next" onclick="nextQuestion()">Next Question</button>
     <br>
-    <script src="app.js"></script>
+
+    <div id="alert" class="container-alert" style="display: none">
+        <div class="alert" style=" height: 195px;">
+            <div class="alert-main">
+                <div class="alert-container">
+                    <p id="alert-message" class="result text-center">Tus Resultados <span id="nombreUser"></span>
+                    </p>
+                    <p id="alert-message" class="d-inline-block mr-5"><i class="fas fa-times incorrect"></i> Incorrectas: <span id="incorrectas"></span> </p>
+                    <p id="alert-message" class="d-inline-block"><i class="fas fa-check correct"></i> Correctas: <span id="correctas"></span> </p>
+                    <button class="btn mt-3" onclick="fin()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
