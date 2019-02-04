@@ -10,7 +10,12 @@ var alert = document.getElementById('alert');
 window.addEventListener('load', category())
 userName.focus();
 
+
+
+console.log(userName.value)
+
 function category() {
+
     localStorage.clear();
     const articleRequest = new XMLHttpRequest();
 
@@ -55,16 +60,33 @@ function startActive() {
     var category = localStorage.getItem('category');
     var difficulty = localStorage.getItem('difficulty');
     var type = localStorage.getItem('type');
-    if(category && difficulty && type) {
+    if (category && difficulty && type) {
         start.disabled = false;
-    }else {
+    } else {
         start.disabled = true;
     }
 }
 
+function nameInput(event) {
+    localStorage.setItem('nameUser', event.target.value);
+    saveActive();
+}
+
+function cantInput(event) {
+    localStorage.setItem('cantQuestions', event.target.value);
+    saveActive();
+}
+
+function saveActive() {
+    var btnSave = document.getElementById('saveDatos');
+    if (localStorage.getItem('nameUser') && localStorage.getItem('cantQuestions')) {
+        btnSave.disabled = false;
+    } else {
+        btnSave.disabled = true;
+    }
+}
+
 function saveDatos() {
-    localStorage.setItem('nameUser', userName.value);
-    localStorage.setItem('cantQuestions', cantQuestions.value);
     alert.style.display = 'none';
     boxName.textContent = localStorage.getItem('nameUser');
 }

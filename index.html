@@ -56,10 +56,10 @@
             <div class="alert-main">
                 <div class="alert-container">
                     <p id="alert-message">Ingresa tu nombre</p>
-                    <input id="userName" type="text" class="form-control mb-4">
+                    <input id="userName" onkeyup="nameInput(event)" type="text" class="form-control mb-4">
                     <p id="alert-message">Cantidad de Preguntas</p>
-                    <input id="cantQuestions" type="text" class="form-control mb-4">
-                    <button class="btn" onclick="saveDatos()">Aceptar</button>
+                    <input id="cantQuestions" onkeyup="cantInput(event)" type="text" class="form-control mb-4">
+                    <button id="saveDatos" class="btn" onclick="saveDatos()" disabled>Aceptar</button>
                 </div>
             </div>
         </div>

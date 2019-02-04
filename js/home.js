@@ -145,7 +145,7 @@ function nextQuestion() {
 
     arrGet.push(1)
     console.log(arrGet);
-    var nombre = localStorage.getItem('nameUser'); 
+    var nombre = localStorage.getItem('nameUser');
     if (arrGet.length == localStorage.getItem('cantQuestions')) {
         localStorage.clear();
         alert.style.display = 'block'
