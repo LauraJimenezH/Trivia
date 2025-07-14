@@ -14,6 +14,11 @@
       "src": "icono.png",
       "sizes": "72x72",
       "type": "image/png"
+    },
+    {
+      "src": "icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     }
   ]
 }
