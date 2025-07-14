@@ -11,9 +11,6 @@ window.addEventListener('load', category())
 userName.focus();
 
 
-
-console.log(userName.value)
-
 function category() {
 
     localStorage.clear();
@@ -37,7 +34,6 @@ function category() {
 }
 
 function handleError() {
-    console.log('Se ha presentado un error');
 }
 
 function choiceCategory(event) {
