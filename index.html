@@ -23,13 +23,13 @@
     <p class="welcome">Welcome <span id="nombreUser"></span></p>
     <form class="text-left">
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Category</label>
+            <label for="selectCategory">Category</label>
             <select class="form-control" id="selectCategory" onchange="choiceCategory(event)">
                 <option selected>Seleccione</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect2">Difficulty</label>
+            <label for="selectDifficulty">Difficulty</label>
             <select class="form-control" id="selectDifficulty" onchange="choiceDifficulty(event)">
                 <option selected>Seleccione</option>
                 <option value="easy">Easy</option>
@@ -38,7 +38,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect3">Type</label>
+            <label for="selectType">Type</label>
             <select class="form-control" id="selectType" onchange="choiceType(event)">
                 <option selected>Seleccione</option>
                 <option value="multiple">Multiple Choice</option>
@@ -56,7 +56,7 @@
             <div class="alert-main">
                 <div class="alert-container">
                     <p id="alert-message">Ingresa tu nombre</p>
-                    <input id="userName" onkeyup="nameInput(event)" type="text" class="form-control mb-4">
+                    <input id="userName" onkeyup="nameInput(event)" type="text" class="form-control mb-4" autocomplete="off">
                     <p id="alert-message">Cantidad de Preguntas</p>
                     <input id="cantQuestions" onkeyup="cantInput(event)" type="text" class="form-control mb-4">
                     <button id="saveDatos" class="btn" onclick="saveDatos()" disabled>Aceptar</button>
