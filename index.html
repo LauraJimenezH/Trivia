@@ -1,71 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Righteous|Satisfy|Shadows+Into+Light|ZCOOL+KuaiLe"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-        <link rel="manifest" href="./manifest.json"> </head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Righteous|Satisfy|Shadows+Into+Light|ZCOOL+KuaiLe"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#2F3BA2">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./icon-144x144.png">
+    <link rel="apple-touch-icon" href="./icon-144x144.png">
+    <link rel="apple-touch-startup-image" href="./icon-144x144.png">
 
-<body class="text-center">
+    <link rel="apple-touch-icon" href="./icono.png" />
+    <link rel="apple-touch-icon" href="./icon-144x144.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+
+  </head>
+
+  <body class="text-center">
     <nav class="navbar">
-        <span class="navbar-brand mb-0 h1 mx-auto">Trivia</span>
+      <span class="navbar-brand mb-0 h1 mx-auto">Trivia</span>
     </nav>
-    <br>
+    <br />
     <p class="welcome">Welcome <span id="nombreUser"></span></p>
     <form class="text-left">
-        <div class="form-group">
-            <label for="selectCategory">Category</label>
-            <select class="form-control" id="selectCategory" onchange="choiceCategory(event)">
-                <option selected>Seleccione</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="selectDifficulty">Difficulty</label>
-            <select class="form-control" id="selectDifficulty" onchange="choiceDifficulty(event)">
-                <option selected>Seleccione</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="selectType">Type</label>
-            <select class="form-control" id="selectType" onchange="choiceType(event)">
-                <option selected>Seleccione</option>
-                <option value="multiple">Multiple Choice</option>
-                <option value="boolean">True / False</option>
-            </select>
-        </div>
+      <div class="form-group">
+        <label for="selectCategory">Category</label>
+        <select
+          class="form-control"
+          id="selectCategory"
+          onchange="choiceCategory(event)"
+        >
+          <option selected>Seleccione</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="selectDifficulty">Difficulty</label>
+        <select
+          class="form-control"
+          id="selectDifficulty"
+          onchange="choiceDifficulty(event)"
+        >
+          <option selected>Seleccione</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="selectType">Type</label>
+        <select
+          class="form-control"
+          id="selectType"
+          onchange="choiceType(event)"
+        >
+          <option selected>Seleccione</option>
+          <option value="multiple">Multiple Choice</option>
+          <option value="boolean">True / False</option>
+        </select>
+      </div>
     </form>
-    <br>
-    <br>
-    <button class="btn btn-start" id="start" onclick="start()" disabled>START</button>
+    <br />
+    <br />
+    <button class="btn btn-start" id="start" onclick="start()" disabled>
+      START
+    </button>
 
     <div id="alert" class="container-alert">
-        <div class="alert">
-
-            <div class="alert-main">
-                <div class="alert-container">
-                    <p id="alert-message">Ingresa tu nombre</p>
-                    <input id="userName" onkeyup="nameInput(event)" type="text" class="form-control mb-4" autocomplete="off">
-                    <p id="alert-message">Cantidad de Preguntas</p>
-                    <input id="cantQuestions" onkeyup="cantInput(event)" type="text" class="form-control mb-4">
-                    <button id="saveDatos" class="btn" onclick="saveDatos()" disabled>Aceptar</button>
-                </div>
-            </div>
+      <div class="alert">
+        <div class="alert-main">
+          <div class="alert-container">
+            <p id="alert-message">Ingresa tu nombre</p>
+            <input
+              id="userName"
+              onkeyup="nameInput(event)"
+              type="text"
+              class="form-control mb-4"
+              autocomplete="off"
+            />
+            <p id="alert-message">Cantidad de Preguntas</p>
+            <input
+              id="cantQuestions"
+              onkeyup="cantInput(event)"
+              type="text"
+              class="form-control mb-4"
+            />
+            <button id="saveDatos" class="btn" onclick="saveDatos()" disabled>
+              Aceptar
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <script src="Service_Worker.js"></script>
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>

@@ -94,11 +94,10 @@ p>span {
 
 .container-alert {
     background-color: rgba(15, 30, 40, 0.5);
-
     position: absolute;
     left: 0;
     width: 100vw;
-    height: 90.9vh;
+    height: 55px;
     top: 9.1vh;
 }
 
